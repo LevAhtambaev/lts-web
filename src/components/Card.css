@@ -1,0 +1,44 @@
+.card-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.card {
+    width: 225px;
+    height: 225px;
+    background-color: var(--button-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-wrapper.large .card {
+    width: 280px;
+    height: 280px;
+}
+
+.card-title {
+    margin: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.plus-icon {
+    display: block;
+    font-size: 50px;
+}

@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+    padding: 10px 20px;
+    height: 70px; /* Устанавливаем высоту */
+    box-sizing: border-box; /* Учитываем padding в общей высоте */
+}
+
+.menu-icon,
+.profile-icon {
+    font-size: 24px;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 50px; /* Размер текста заголовка */
+    margin: 0;
+}

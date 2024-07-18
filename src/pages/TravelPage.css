@@ -1,0 +1,12 @@
+/* src/pages/TravelPage.css */
+.travel-form {
+    padding: 20px;
+    text-align: center;
+}
+
+.travel-form h2 {
+    font-size: 40px; /* Настраиваем размер текста */
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal; /* При необходимости можно добавить дополнительные стили */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}

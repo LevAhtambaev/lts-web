@@ -1,18 +1,20 @@
+// src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import TravelPage from './pages/TravelPage'; // Импортируем страницу TravelPage
 import './App.css';
-import Header from './components/Header';
-import Card from './components/Card';
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <div className="card-container">
-                <Card title="NEW PLAN" />
-                <Card title="NEW TRAVEL" className="large" />
-                <Card title="COLLECTION" />
+        <Router>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/travel" element={<TravelPage />} /> {/* Добавляем маршрут для страницы /travel */}
+                </Routes>
             </div>
-        </div>
+        </Router>
     );
 }
 

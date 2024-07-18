@@ -1,3 +1,4 @@
+/* src/components/Header.css */
 .header {
     display: flex;
     justify-content: space-between;
@@ -11,6 +12,13 @@
 .menu-icon,
 .profile-icon {
     font-size: 24px;
+}
+
+/* Добавляем стили для изображений иконок */
+.menu-icon img,
+.profile-icon img {
+    width: 48px; /* Ширина изображения */
+    height: 48px; /* Высота изображения */
 }
 
 h1 {

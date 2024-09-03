@@ -2,11 +2,56 @@
 .travel-form {
     padding: 20px;
     text-align: center;
+    background-color: #f2f2f2;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 .travel-form h2 {
-    font-size: 40px; /* Настраиваем размер текста */
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: normal; /* При необходимости можно добавить дополнительные стили */
-    margin-bottom: 20px; /* Добавляем отступ снизу */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group small {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.create-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.create-button:hover {
+    background-color: #555;
 }

@@ -1,0 +1,231 @@
+/* src/pages/TravelDetailsPage.css */
+
+.travel-details-page {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.travel-preview {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Высота, подбирается по вкусу */
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.travel-info-overlay {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.35); /* Темная подложка для читаемости текста */
+    width: 100%;
+    text-align: left;
+}
+
+.travel-dates {
+    font-size: 60px; /* Размер шрифта, можно настроить */
+    margin-bottom: 5px;
+}
+
+.travel-name {
+    font-size: 80px; /* Размер шрифта, можно настроить */
+    margin: 0;
+}
+
+.travel-description-container, .places-list, .place-story-container {
+    width: 60%; /* Оставляем 20% слева и справа */
+    margin: 0 auto; /* Центрируем контент */
+}
+
+.travel-description {
+    font-size: 30px;
+    color: #777777;
+    text-align: center;
+}
+
+.divider {
+    border: 0;
+    height: 4px;
+    background: #ccc;
+    margin: 20px;
+}
+
+.place {
+    margin-bottom: 30px;
+}
+
+.place-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.place-name {
+    font-size: 35px;
+    margin: 0;
+}
+
+.place-date {
+    font-size: 30px;
+}
+
+.place-expense-icon img {
+    width: 40px;  /* Установите нужные фиксированные размеры */
+    height: 40px; /* Установите нужные фиксированные размеры */
+}
+
+
+.place-preview {
+    width: 80%; /* Немного уже, чем контейнер */
+    height: auto;
+    margin-top: 30px;
+    margin-left: 5%; /* Центрируем изображение */
+}
+
+.place-story-container {
+    width: 80%; /* Уже, чем изображение */
+    margin: 10px auto; /* Центрируем контент */
+}
+
+.place-story {
+    color: #777777;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.add-place-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-place-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: #333333;
+}
+
+.add-place-line {
+    width: 500px;
+    height: 3px;
+    background-color: #000;
+    transition: width 0.4s ease;
+    margin-top: 10px;
+}
+
+.add-place-icon {
+    font-size: 70px;
+    margin: 0 10px;
+}
+
+.add-place-button:hover .add-place-line {
+    width: 100px;
+}
+
+.add-place-button:hover {
+    transform: scale(1.1);
+}
+
+
+
+.upload-preview-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-preview-button:hover {
+    background-color: #0056b3;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    max-width: 90%;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.place-expense-icon-wrapper {
+    position: relative; /* Обертка для правильного позиционирования тултипа */
+}
+
+.expenses-tooltip p:first-child,
+.expenses-tooltip p:last-child {
+    text-align: center; /* Центрируем первый и последний абзацы */
+}
+
+.expenses-tooltip p:not(:first-child):not(:last-child) {
+    text-align: left; /* Выровнять остальные абзацы по левому краю */
+    margin: 8px 0; /* Добавляем небольшой отступ между строками */
+}
+
+
+.expenses-tooltip {
+    position: absolute;
+    top: 50px; /* Позиционируем тултип под иконкой */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Добавляем плавное появление */
+    pointer-events: none; /* Избегаем ненужных событий мыши */
+}
+
+.place-expense-icon-wrapper:hover .expenses-tooltip {
+    opacity: 1; /* Показываем тултип при наведении на обертку */
+    pointer-events: auto; /* Включаем события мыши */
+}
+

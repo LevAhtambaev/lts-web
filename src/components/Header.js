@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Импортируем Link и useNavigate из react-router-dom
+import { useNavigate } from 'react-router-dom'; // Импортируем Link и useNavigate из react-router-dom
 import menuIcon from '../assets/images/menu.png';
 import profileIcon from '../assets/images/profile.png';
 import './Header.css'; // Если у вас есть CSS для этого компонента
@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <h1>
                 <span className="header-link" onClick={handleClick}> {/* Добавляем onClick для обработки клика */}
-                    LEO'S TRAVEL STORIES
+                    LTS
                 </span>
             </h1>
             <div className="profile-icon">

@@ -2,7 +2,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import TravelPage from './pages/TravelPage'; // Импортируем страницу TravelPage
+import TravelPage from './pages/TravelPage';
+import TravelDetailsPage from './pages/TravelDetailsPage'; // Импортируем страницу TravelDetailsPage
 import './App.css';
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
             <div className="App">
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/travel" element={<TravelPage />} /> {/* Добавляем маршрут для страницы /travel */}
+                    <Route path="/travel" element={<TravelPage />} />
+                    {/* Добавляем маршрут для страницы /travel/:uuid */}
+                    <Route path="/travel/:uuid" element={<TravelDetailsPage />} />
                 </Routes>
             </div>
         </Router>

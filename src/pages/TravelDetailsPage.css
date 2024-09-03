@@ -65,6 +65,7 @@
 .place-name {
     font-size: 35px;
     margin: 0;
+    color: #444444;
 }
 
 .place-date {
@@ -85,7 +86,7 @@
 }
 
 .place-story-container {
-    width: 90%; /* Уже, чем изображение */
+    width: 100%; /* Уже, чем изображение */
     margin: 10px auto; /* Центрируем контент */
 }
 
@@ -250,4 +251,11 @@
 .gallery-image-preview:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+    background-color: white; /* Белый фон */
+    width: 70%; /* Ширина 70% экрана */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding-top: 20px; /* Добавляем небольшой отступ сверху */
 }

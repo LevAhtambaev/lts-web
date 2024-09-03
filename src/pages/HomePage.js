@@ -9,9 +9,9 @@ function HomePage() {
         <div className="App">
             <Header />
             <div className="card-container">
-                <Card title="NEW PLAN" />
-                <Card title="NEW TRAVEL" className="large" />
-                <Card title="COLLECTION" />
+                <Card title="ПЛАН" />
+                <Card title="ПУТЕШЕСТВИЕ" className="large" />
+                <Card title="КОЛЛЕКЦИЯ" />
             </div>
         </div>
     );

@@ -139,6 +139,8 @@ const TravelDetailsPage = () => {
                     )}
                 </div>
 
+                {/* Новый контейнер с белым фоном и шириной 70% */}
+                <div className="content-container">
                 {/* Travel Description */}
                 <div className="travel-description-container">
                     <div className="travel-description">
@@ -210,18 +212,21 @@ const TravelDetailsPage = () => {
 
                         </div>
                     ))}
-                </div>
 
-
-                {/* Add Place Button */}
-                <div className="add-place-container">
-                    <div className="add-place-button" onClick={() => { /* Заглушка для создания нового места */
-                    }}>
-                        <span className="add-place-line"></span>
-                        <span className="add-place-icon">+</span>
-                        <span className="add-place-line"></span>
+                    {/* Add Place Button */}
+                    <div className="add-place-container">
+                        <div className="add-place-button" onClick={() => { /* Заглушка для создания нового места */
+                        }}>
+                            <span className="add-place-line"></span>
+                            <span className="add-place-icon">+</span>
+                            <span className="add-place-line"></span>
+                        </div>
                     </div>
+
                 </div>
+                </div>
+
+
 
                 {/* Upload Modal */}
                 {showUploadModal && (

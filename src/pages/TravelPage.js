@@ -50,33 +50,32 @@ const TravelPage = () => {
         <div>
             <Header /> {/* Добавляем Header */}
             <div className="travel-form">
-                <h2>CREATE YOUR STORY</h2>
+                <h3>ОПИШИ СВОЕ ПУТЕШЕСТВИЕ</h3>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="travel-name">Travel name</label>
+                        <label htmlFor="travel-name">Название путешествия</label>
                         <input
                             type="text"
                             id="travel-name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            placeholder="Name"
+                            placeholder="Название"
                         />
-                        <small>Set a name for your travel</small>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="travel-description">Description</label>
+                        <label htmlFor="travel-description">Описание</label>
                         <textarea
                             id="travel-description"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
-                            placeholder="A very long line of text which is expected to span more than two to three lines so it breaks as the text increases."
+                            placeholder="Описание"
                         />
-                        <small>Write a summary for your travel</small>
+                        <small>Кратко опиши введение для своей поездки</small>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="start-date">Start date *</label>
+                        <label htmlFor="start-date">Дата начала путешествия</label>
                         <input
                             type="date"
                             id="start-date"
@@ -84,11 +83,10 @@ const TravelPage = () => {
                             onChange={(e) => setDateStart(e.target.value)}
                             placeholder="YYYY/MM/DD"
                         />
-                        <small>Set a start date for your travel</small>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="end-date">End date *</label>
+                        <label htmlFor="end-date">Дата конца путешествия</label>
                         <input
                             type="date"
                             id="end-date"
@@ -96,10 +94,9 @@ const TravelPage = () => {
                             onChange={(e) => setDateEnd(e.target.value)}
                             placeholder="YYYY/MM/DD"
                         />
-                        <small>Set an end date for your travel</small>
                     </div>
 
-                    <button type="submit" className="create-button">Create</button>
+                    <button type="submit" className="create-button">Создать</button>
                 </form>
             </div>
         </div>

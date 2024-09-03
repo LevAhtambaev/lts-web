@@ -1,0 +1,35 @@
+.image-slider {
+    position: relative;
+    margin: auto; /* Центрирование */
+    overflow: hidden; /* Скрыть переполнение */
+}
+
+.slider-image {
+    width: 100%; /* Ширина изображения 100% от родителя */
+    height: 100%; /* Высота изображения 100% от родителя */
+    object-fit: cover; /* Соотношение сторон изображения */
+    border-radius: 8px;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.slider-button.left {
+    left: 10px;
+}
+
+.slider-button.right {
+    right: 10px;
+}
+
+

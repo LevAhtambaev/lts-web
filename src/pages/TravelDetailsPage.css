@@ -85,14 +85,15 @@
 }
 
 .place-story-container {
-    width: 80%; /* Уже, чем изображение */
+    width: 90%; /* Уже, чем изображение */
     margin: 10px auto; /* Центрируем контент */
 }
 
 .place-story {
+    text-align: left;
     color: #777777;
-    margin-top: 20px;
-    font-size: 30px;
+    margin-top: 40px;
+    font-size: 24px;
 }
 
 .add-place-container {
@@ -229,3 +230,24 @@
     pointer-events: auto; /* Включаем события мыши */
 }
 
+/* Добавленные стили для галереи изображений места */
+.place-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center; /* Центрируем галерею */
+}
+
+.gallery-image-preview {
+    width: 30%; /* Примерный размер превью изображений */
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-image-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -4,6 +4,7 @@ import './TravelDetailsPage.css';
 import moneyIcon from '../assets/images/money.png';
 import defaultPreview from '../assets/images/default-preview.jpg'; // Добавьте путь к изображению по умолчанию
 import Header from "../components/Header";
+import ImageSlider from "../components/ImageSlider";
 
 // Функция для форматирования валюты
 const formatCurrency = (value) => {
@@ -196,8 +197,17 @@ const TravelDetailsPage = () => {
                             </div>
                             <img src={place.preview} alt={place.name} className="place-preview"/>
                             <div className="place-story-container">
-                                <p className="place-story">{place.story}</p>
+                                {place.story.split('\n').map((line, index) => (
+                                    <p className="place-story" key={index}>{line}</p>
+                                ))}
                             </div>
+
+                            {/* Слайдер для изображений места с заданными размерами */}
+                            {place.images && place.images.length > 0 && (
+                                <ImageSlider images={place.images} width="600px" height="400px" />
+                            )}
+
+
                         </div>
                     ))}
                 </div>

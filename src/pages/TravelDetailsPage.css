@@ -85,6 +85,13 @@
     margin-left: 5%; /* Центрируем изображение */
 }
 
+.place-preview-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px; /* Ограничим ширину для адекватного позиционирования */
+}
+
 .place-story-container {
     width: 100%; /* Уже, чем изображение */
     margin: 10px auto; /* Центрируем контент */
@@ -133,17 +140,54 @@
 }
 
 
+.place-preview-wrapper {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto; /* Центрирование блока */
+}
+
+.upload-place-preview-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+}
+
+.upload-place-images-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    top: 5px;
+}
 
 .upload-preview-button {
     position: absolute;
     bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
+    right: 20px; /* Попробуйте изменить это значение для корректного выравнивания */
+    background-color: #007bff;
     color: white;
     border: none;
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
+}
+
+
+.upload-place-preview-button:hover,
+.upload-place-images-button:hover {
+    background-color: #0056b3;
 }
 
 .upload-preview-button:hover {
@@ -258,4 +302,24 @@
     width: 70%; /* Ширина 70% экрана */
     margin: 0 auto; /* Центрируем контейнер */
     padding-top: 20px; /* Добавляем небольшой отступ сверху */
+}
+
+.modal-content label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; /* Отступ между лейблом и полем */
+}
+
+.modal-content div {
+    margin-bottom: 20px; /* Отступ между блоками формы */
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Увеличиваем отступ снизу */
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }

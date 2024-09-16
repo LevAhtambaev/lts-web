@@ -19,7 +19,7 @@ const PlacesList = ({ places, travelUuid }) => {
     };
 
     const handleMouseLeave = () => {
-        setShowExpensesTooltip(false);
+        setShowExpensesTooltip(true);
         setHoveredExpenses(null);
     };
 
@@ -113,7 +113,7 @@ const PlacesList = ({ places, travelUuid }) => {
                             </div>
                             {showExpensesTooltip && hoveredExpenses === place.expenses && (
                                 <div className="expenses-tooltip">
-                                    <ExpensesTooltip expenses={place.expenses} />
+                                    <ExpensesTooltip expenses={place.expenses} placeUuid={place.id}/>
                                 </div>
                             )}
                         </div>

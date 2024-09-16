@@ -1,0 +1,71 @@
+:root {
+    --menu-color: #fff;
+}
+
+/* Иконка меню (гамбургер/крестик) */
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Иконка фиксируется, чтобы всегда оставаться сверху */
+    top: 20px; /* Расположение иконки относительно верхней части экрана */
+    left: 20px; /* Расположение иконки относительно правого края */
+    z-index: 1001; /* Убедитесь, что иконка всегда выше оверлея меню */
+    transition: transform 0.5s ease;
+}
+
+.menu-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-icon.open img {
+    transform: rotate(90deg); /* Пример анимации для иконки */
+    transition: transform 0.3s ease;
+}
+
+/* Оверлей меню */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--header-color);
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 900; /* Оверлей ниже кнопки */
+}
+
+.menu-overlay.show {
+    height: 100%; /* Раскрытие оверлея на весь экран */
+}
+
+.menu-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--menu-color);
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1000; /* Чтобы текст был выше оверлея, но ниже кнопки */
+}
+
+.menu-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-content li {
+    margin: 20px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-content li:hover {
+    color: darkgray;
+}

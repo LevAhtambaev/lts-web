@@ -1,8 +1,8 @@
 // src/components/Header.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Импортируем Link и useNavigate из react-router-dom
-import menuIcon from '../assets/images/menu.png';
 import profileIcon from '../assets/images/profile.png';
+import Menu from './Menu'; // Импортируем компонент меню
 import './Header.css'; // Если у вас есть CSS для этого компонента
 
 const Header = () => {
@@ -14,9 +14,9 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="menu-icon">
-                <img src={menuIcon} alt="Menu Icon" />
-            </div>
+            {/* Компонент Menu заменяет иконку меню */}
+            <Menu />
+
             <h1>
                 <span className="header-link" onClick={handleClick}> {/* Добавляем onClick для обработки клика */}
                     LTS

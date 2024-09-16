@@ -266,14 +266,16 @@
     white-space: nowrap;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Добавляем плавное появление */
-    pointer-events: none; /* Избегаем ненужных событий мыши */
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
 
-.place-expense-icon-wrapper:hover .expenses-tooltip {
-    opacity: 1; /* Показываем тултип при наведении на обертку */
+.place-expense-icon-wrapper:hover .expenses-tooltip,
+.place-expense-icon-wrapper .expenses-tooltip:hover {
+    opacity: 1; /* Показываем тултип при наведении на обертку или на сам тултип */
     pointer-events: auto; /* Включаем события мыши */
 }
+
 
 /* Добавленные стили для галереи изображений места */
 .place-gallery {
@@ -323,3 +325,4 @@
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
